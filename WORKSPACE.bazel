@@ -1,0 +1,16 @@
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "rules_python",
+    sha256 = "39d309c129f87bf1a290f6d84edb025bd07682790832261c4b689b5e97199bf9",
+    strip_prefix = "rules_python-bbec4c29add6e7300b416fd2cd2f9da7d2488606",
+    url = "https://github.com/bazelbuild/rules_python/archive/bbec4c29add6e7300b416fd2cd2f9da7d2488606.zip",
+)
+
+load("@rules_python//python:repositories.bzl", "py_repositories")
+
+py_repositories()
+
+register_toolchains(
+    "//:python3_toolchain",
+)
