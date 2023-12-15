@@ -1,4 +1,4 @@
-bazel-out/
-bazel-bin/
-bazel-testlogs/
-bazel-bazel*/
+/bazel-out
+/bazel-bin
+/bazel-testlogs
+/bazel-bazel*
