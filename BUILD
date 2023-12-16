@@ -6,6 +6,7 @@ sh_binary(
     name = "wrapped_python",
     srcs = [":python3_wrapper.sh"],
     data = [":python3_data.sh"],
+    deps = ["@bazel_tools//tools/bash/runfiles"],
 )
 
 py_runtime(
